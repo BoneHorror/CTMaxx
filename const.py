@@ -8,6 +8,6 @@ class ANSI_COLORS:
     BLUE = "\033[34m"
     CYAN = "\033[36m"
 
-P_CORES = range(0,11) #P/E denomer is used interchangeably with CCDs, where P is CCD0 and E is CCD1
-E_CORES = range(11,23)
+P_CORES = range(0,12) #P/E denomer is used interchangeably with CCDs, where P is CCD0 and E is CCD1
+E_CORES = range(12,24)
 SMT = True
