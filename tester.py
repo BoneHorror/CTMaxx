@@ -98,8 +98,8 @@ class CPUTaskTester:
         slowest_pcore = max(self.results_p, key=lambda x: x[1])
         fastest_ecore = min(self.results_e, key=lambda x: x[1])
         slowest_ecore = max(self.results_e, key=lambda x: x[1])
-        print_with_log(self.results_p)
-        print_with_log(self.results_e)
+        print_with_log(self.results_p, do_print=False)
+        print_with_log(self.results_e, do_print=False)
         sum_p = 0.0
         sum_e = 0.0
         for result in self.results_p:
