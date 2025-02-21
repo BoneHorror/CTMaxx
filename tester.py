@@ -49,7 +49,7 @@ class CPUTaskTester:
             elapsed_time = round((end_time - start_time), 4)
             if self.time_estimate[0] == 0:
                 self.time_estimate[0] = round((elapsed_time * repeats), 3)
-                print_with_log(f"{self.color.GREY}Calculating Core {core_set} average time required to process all runs, \nestimated time needed before the average result is calculated: {self.time_estimate[0]}s{self.color.RESET}")
+                print_with_log(f"{self.color.GREY}Calculating Core {core_set} average time required to process all runs, \nestimated time needed before the result is calculated: {self.time_estimate[0]}s{self.color.RESET}")
             time_list.append(elapsed_time)
         mean_time = sum(time_list)/len(time_list)
         print_with_log(f"{self.color.GREY}Real time elapsed: {sum(time_list)}{self.color.RESET}")
@@ -110,10 +110,10 @@ class CPUTaskTester:
         mean_ecore = sum_e/len(self.results_e)
         print_with_log(f"{self.color.GREEN}\nFastest cluster 0 core: Core {fastest_pcore[0]} with {fastest_pcore[1]:.4f} seconds{self.color.RESET}")
         print_with_log(f"{self.color.RED}Slowest cluster 0 core: Core {slowest_pcore[0]} with {slowest_pcore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for cluster 0: {mean_pcore}{self.color.RESET}")
+        print_with_log(f"{self.color.YELLOW}Average time for cluster 0: {mean_pcore:.4f}{self.color.RESET}")
         print_with_log(f"{self.color.GREEN}\nFastest cluster 1 core: Core {fastest_ecore[0]} with {fastest_ecore[1]:.4f} seconds{self.color.RESET}")
         print_with_log(f"{self.color.RED}Slowest cluster 1 core: Core {slowest_ecore[0]} with {slowest_ecore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for cluster 1: {mean_ecore}{self.color.RESET}")
+        print_with_log(f"{self.color.YELLOW}Average time for cluster 1: {mean_ecore:.4f}{self.color.RESET}")
         self.results_p = []
         self.results_e = []
 
