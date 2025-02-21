@@ -110,10 +110,10 @@ class CPUTaskTester:
         mean_ecore = sum_e/len(self.results_e)
         print_with_log(f"{self.color.GREEN}\nFastest cluster 0 core: Core {fastest_pcore[0]} with {fastest_pcore[1]:.4f} seconds{self.color.RESET}")
         print_with_log(f"{self.color.RED}Slowest cluster 0 core: Core {slowest_pcore[0]} with {slowest_pcore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for cluster 0: {mean_pcore:.4f}{self.color.RESET}")
+        print_with_log(f"{self.color.YELLOW}Average time for a cluster 0 core to process {self.last_task_name}: {mean_pcore:.4f}{self.color.RESET}")
         print_with_log(f"{self.color.GREEN}\nFastest cluster 1 core: Core {fastest_ecore[0]} with {fastest_ecore[1]:.4f} seconds{self.color.RESET}")
         print_with_log(f"{self.color.RED}Slowest cluster 1 core: Core {slowest_ecore[0]} with {slowest_ecore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for cluster 1: {mean_ecore:.4f}{self.color.RESET}")
+        print_with_log(f"{self.color.YELLOW}Average time for a cluster 1 core to process {self.last_task_name}: {mean_ecore:.4f}{self.color.RESET}")
         self.results_p = []
         self.results_e = []
 
