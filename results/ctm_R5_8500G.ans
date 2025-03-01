@@ -1,0 +1,196 @@
+2025-02-21 09:59:43 INFO     Found AMD64 Family 25 Model 120 Stepping 0, AuthenticAMD with 12 logical cores. Architecture: ('64bit', 'WindowsPE')
+2025-02-21 09:59:43 INFO     Iterating tests on cores...
+2025-02-21 09:59:43 INFO     [32m
+Started running task: Matrix multiplication[0m
+2025-02-21 09:59:44 INFO     [30mCalculating Core [0] average time required to process all runs, 
+estimated time needed before the average result is calculated: 9.095s[0m
+2025-02-21 09:59:55 INFO     [30mReal time elapsed: 9.6997[0m
+2025-02-21 09:59:55 INFO     [36mCore 0: 0.3731 seconds[0m
+2025-02-21 09:59:56 INFO     [30mCalculating Core [2] average time required to process all runs, 
+estimated time needed before the average result is calculated: 12.495s[0m
+2025-02-21 10:00:11 INFO     [30mReal time elapsed: 12.9232[0m
+2025-02-21 10:00:11 INFO     [33mCore 2: 0.4970 seconds[0m
+2025-02-21 10:00:12 INFO     [30mCalculating Core [4] average time required to process all runs, 
+estimated time needed before the average result is calculated: 12.433s[0m
+2025-02-21 10:00:27 INFO     [30mReal time elapsed: 13.129199999999999[0m
+2025-02-21 10:00:27 INFO     [33mCore 4: 0.5050 seconds[0m
+2025-02-21 10:00:27 INFO     [30mCalculating Core [6] average time required to process all runs, 
+estimated time needed before the average result is calculated: 12.605s[0m
+2025-02-21 10:00:42 INFO     [30mReal time elapsed: 13.0151[0m
+2025-02-21 10:00:42 INFO     [33mCore 6: 0.5006 seconds[0m
+2025-02-21 10:00:43 INFO     [30mCalculating Core [8] average time required to process all runs, 
+estimated time needed before the average result is calculated: 9.035s[0m
+2025-02-21 10:00:54 INFO     [30mReal time elapsed: 9.4195[0m
+2025-02-21 10:00:54 INFO     [36mCore 8: 0.3623 seconds[0m
+2025-02-21 10:00:55 INFO     [30mCalculating Core [10] average time required to process all runs, 
+estimated time needed before the average result is calculated: 12.402s[0m
+2025-02-21 10:01:10 INFO     [30mReal time elapsed: 12.9128[0m
+2025-02-21 10:01:10 INFO     [33mCore 10: 0.4966 seconds[0m
+2025-02-21 10:01:10 INFO     [32m
+Finished running task: Matrix multiplication[0m
+2025-02-21 10:01:10 INFO     [([0], 0.37306538461538463), ([8], 0.3622884615384615)]
+2025-02-21 10:01:10 INFO     [([2], 0.4970461538461538), ([4], 0.5049692307692307), ([6], 0.5005807692307692), ([10], 0.49664615384615385)]
+2025-02-21 10:01:10 INFO     [32m
+Fastest cluster 0 core: Core [8] with 0.3623 seconds[0m
+2025-02-21 10:01:10 INFO     [31mSlowest cluster 0 core: Core [0] with 0.3731 seconds[0m
+2025-02-21 10:01:10 INFO     [33mAverage time for cluster 0: 0.36767692307692307[0m
+2025-02-21 10:01:10 INFO     [32m
+Fastest cluster 1 core: Core [10] with 0.4966 seconds[0m
+2025-02-21 10:01:10 INFO     [31mSlowest cluster 1 core: Core [4] with 0.5050 seconds[0m
+2025-02-21 10:01:10 INFO     [33mAverage time for cluster 1: 0.49981057692307684[0m
+2025-02-21 10:01:10 INFO     Iterating tests on cores...
+2025-02-21 10:01:10 INFO     [32m
+Started running task: Sorting arrays[0m
+2025-02-21 10:01:11 INFO     [30mCalculating Core [0] average time required to process all runs, 
+estimated time needed before the average result is calculated: 32.413s[0m
+2025-02-21 10:01:46 INFO     [30mReal time elapsed: 33.5344[0m
+2025-02-21 10:01:46 INFO     [36mCore 0: 1.2898 seconds[0m
+2025-02-21 10:01:48 INFO     [30mCalculating Core [2] average time required to process all runs, 
+estimated time needed before the average result is calculated: 44.34s[0m
+2025-02-21 10:02:34 INFO     [30mReal time elapsed: 45.7208[0m
+2025-02-21 10:02:34 INFO     [33mCore 2: 1.7585 seconds[0m
+2025-02-21 10:02:36 INFO     [30mCalculating Core [4] average time required to process all runs, 
+estimated time needed before the average result is calculated: 43.7s[0m
+2025-02-21 10:03:23 INFO     [30mReal time elapsed: 45.6544[0m
+2025-02-21 10:03:23 INFO     [33mCore 4: 1.7559 seconds[0m
+2025-02-21 10:03:25 INFO     [30mCalculating Core [6] average time required to process all runs, 
+estimated time needed before the average result is calculated: 43.672s[0m
+2025-02-21 10:04:12 INFO     [30mReal time elapsed: 46.5637[0m
+2025-02-21 10:04:12 INFO     [33mCore 6: 1.7909 seconds[0m
+2025-02-21 10:04:13 INFO     [30mCalculating Core [8] average time required to process all runs, 
+estimated time needed before the average result is calculated: 32.252s[0m
+2025-02-21 10:04:48 INFO     [30mReal time elapsed: 33.4829[0m
+2025-02-21 10:04:48 INFO     [36mCore 8: 1.2878 seconds[0m
+2025-02-21 10:04:50 INFO     [30mCalculating Core [10] average time required to process all runs, 
+estimated time needed before the average result is calculated: 44.445s[0m
+2025-02-21 10:05:37 INFO     [30mReal time elapsed: 46.1645[0m
+2025-02-21 10:05:37 INFO     [33mCore 10: 1.7756 seconds[0m
+2025-02-21 10:05:37 INFO     [32m
+Finished running task: Sorting arrays[0m
+2025-02-21 10:05:37 INFO     [([0], 1.2897846153846153), ([8], 1.2878038461538461)]
+2025-02-21 10:05:37 INFO     [([2], 1.7584923076923076), ([4], 1.7559384615384617), ([6], 1.7909115384615384), ([10], 1.7755576923076921)]
+2025-02-21 10:05:37 INFO     [32m
+Fastest cluster 0 core: Core [8] with 1.2878 seconds[0m
+2025-02-21 10:05:37 INFO     [31mSlowest cluster 0 core: Core [0] with 1.2898 seconds[0m
+2025-02-21 10:05:37 INFO     [33mAverage time for cluster 0: 1.2887942307692306[0m
+2025-02-21 10:05:37 INFO     [32m
+Fastest cluster 1 core: Core [4] with 1.7559 seconds[0m
+2025-02-21 10:05:37 INFO     [31mSlowest cluster 1 core: Core [6] with 1.7909 seconds[0m
+2025-02-21 10:05:37 INFO     [33mAverage time for cluster 1: 1.770225[0m
+2025-02-21 10:05:37 INFO     Iterating tests on cores...
+2025-02-21 10:05:37 INFO     [32m
+Started running task: Finding highest prime numbers[0m
+2025-02-21 10:05:40 INFO     [30mCalculating Core [0] average time required to process all runs, 
+estimated time needed before the average result is calculated: 85.955s[0m
+2025-02-21 10:07:09 INFO     [30mReal time elapsed: 89.8778[0m
+2025-02-21 10:07:09 INFO     [36mCore 0: 3.4568 seconds[0m
+2025-02-21 10:07:14 INFO     [30mCalculating Core [2] average time required to process all runs, 
+estimated time needed before the average result is calculated: 117.657s[0m
+2025-02-21 10:09:17 INFO     [30mReal time elapsed: 125.1059[0m
+2025-02-21 10:09:17 INFO     [33mCore 2: 4.8118 seconds[0m
+2025-02-21 10:09:22 INFO     [30mCalculating Core [4] average time required to process all runs, 
+estimated time needed before the average result is calculated: 117.435s[0m
+2025-02-21 10:11:23 INFO     [30mReal time elapsed: 123.7182[0m
+2025-02-21 10:11:23 INFO     [33mCore 4: 4.7584 seconds[0m
+2025-02-21 10:11:28 INFO     [30mCalculating Core [6] average time required to process all runs, 
+estimated time needed before the average result is calculated: 118.92s[0m
+2025-02-21 10:13:33 INFO     [30mReal time elapsed: 126.9683[0m
+2025-02-21 10:13:33 INFO     [33mCore 6: 4.8834 seconds[0m
+2025-02-21 10:13:36 INFO     [30mCalculating Core [8] average time required to process all runs, 
+estimated time needed before the average result is calculated: 85.942s[0m
+2025-02-21 10:15:07 INFO     [30mReal time elapsed: 91.1191[0m
+2025-02-21 10:15:07 INFO     [36mCore 8: 3.5046 seconds[0m
+2025-02-21 10:15:11 INFO     [30mCalculating Core [10] average time required to process all runs, 
+estimated time needed before the average result is calculated: 117.562s[0m
+2025-02-21 10:17:16 INFO     [30mReal time elapsed: 127.117[0m
+2025-02-21 10:17:16 INFO     [33mCore 10: 4.8891 seconds[0m
+2025-02-21 10:17:16 INFO     [32m
+Finished running task: Finding highest prime numbers[0m
+2025-02-21 10:17:16 INFO     [([0], 3.456838461538461), ([8], 3.5045807692307696)]
+2025-02-21 10:17:16 INFO     [([2], 4.811765384615385), ([4], 4.758392307692308), ([6], 4.883396153846154), ([10], 4.889115384615385)]
+2025-02-21 10:17:16 INFO     [32m
+Fastest cluster 0 core: Core [0] with 3.4568 seconds[0m
+2025-02-21 10:17:16 INFO     [31mSlowest cluster 0 core: Core [8] with 3.5046 seconds[0m
+2025-02-21 10:17:16 INFO     [33mAverage time for cluster 0: 3.4807096153846153[0m
+2025-02-21 10:17:16 INFO     [32m
+Fastest cluster 1 core: Core [4] with 4.7584 seconds[0m
+2025-02-21 10:17:16 INFO     [31mSlowest cluster 1 core: Core [10] with 4.8891 seconds[0m
+2025-02-21 10:17:16 INFO     [33mAverage time for cluster 1: 4.835667307692308[0m
+2025-02-21 10:17:16 INFO     Iterating tests on cores...
+2025-02-21 10:17:16 INFO     [32m
+Started running task: Fast Fourier transforms[0m
+2025-02-21 10:17:17 INFO     [30mCalculating Core [0] average time required to process all runs, 
+estimated time needed before the average result is calculated: 1.653s[0m
+2025-02-21 10:17:21 INFO     [30mReal time elapsed: 1.6540000000000001[0m
+2025-02-21 10:17:21 INFO     [36mCore 0: 0.0636 seconds[0m
+2025-02-21 10:17:21 INFO     [30mCalculating Core [2] average time required to process all runs, 
+estimated time needed before the average result is calculated: 1.908s[0m
+2025-02-21 10:17:25 INFO     [30mReal time elapsed: 2.0755[0m
+2025-02-21 10:17:25 INFO     [33mCore 2: 0.0798 seconds[0m
+2025-02-21 10:17:26 INFO     [30mCalculating Core [4] average time required to process all runs, 
+estimated time needed before the average result is calculated: 1.943s[0m
+2025-02-21 10:17:30 INFO     [30mReal time elapsed: 2.0525[0m
+2025-02-21 10:17:30 INFO     [33mCore 4: 0.0789 seconds[0m
+2025-02-21 10:17:30 INFO     [30mCalculating Core [6] average time required to process all runs, 
+estimated time needed before the average result is calculated: 1.943s[0m
+2025-02-21 10:17:35 INFO     [30mReal time elapsed: 2.0472[0m
+2025-02-21 10:17:35 INFO     [33mCore 6: 0.0787 seconds[0m
+2025-02-21 10:17:35 INFO     [30mCalculating Core [8] average time required to process all runs, 
+estimated time needed before the average result is calculated: 1.587s[0m
+2025-02-21 10:17:39 INFO     [30mReal time elapsed: 1.6728[0m
+2025-02-21 10:17:39 INFO     [36mCore 8: 0.0643 seconds[0m
+2025-02-21 10:17:39 INFO     [30mCalculating Core [10] average time required to process all runs, 
+estimated time needed before the average result is calculated: 2.107s[0m
+2025-02-21 10:17:44 INFO     [30mReal time elapsed: 2.0506[0m
+2025-02-21 10:17:44 INFO     [33mCore 10: 0.0789 seconds[0m
+2025-02-21 10:17:44 INFO     [32m
+Finished running task: Fast Fourier transforms[0m
+2025-02-21 10:17:44 INFO     [([0], 0.06361538461538462), ([8], 0.06433846153846154)]
+2025-02-21 10:17:44 INFO     [([2], 0.07982692307692307), ([4], 0.0789423076923077), ([6], 0.07873846153846155), ([10], 0.07886923076923077)]
+2025-02-21 10:17:44 INFO     [32m
+Fastest cluster 0 core: Core [0] with 0.0636 seconds[0m
+2025-02-21 10:17:44 INFO     [31mSlowest cluster 0 core: Core [8] with 0.0643 seconds[0m
+2025-02-21 10:17:44 INFO     [33mAverage time for cluster 0: 0.06397692307692307[0m
+2025-02-21 10:17:44 INFO     [32m
+Fastest cluster 1 core: Core [6] with 0.0787 seconds[0m
+2025-02-21 10:17:44 INFO     [31mSlowest cluster 1 core: Core [2] with 0.0798 seconds[0m
+2025-02-21 10:17:44 INFO     [33mAverage time for cluster 1: 0.07909423076923078[0m
+2025-02-21 10:17:44 INFO     Iterating tests on cores...
+2025-02-21 10:17:44 INFO     [32m
+Started running task: Gaussian blur[0m
+2025-02-21 10:17:44 INFO     [30mCalculating Core [0] average time required to process all runs, 
+estimated time needed before the average result is calculated: 16.12s[0m
+2025-02-21 10:18:03 INFO     [30mReal time elapsed: 16.7784[0m
+2025-02-21 10:18:03 INFO     [36mCore 0: 0.6453 seconds[0m
+2025-02-21 10:18:04 INFO     [30mCalculating Core [2] average time required to process all runs, 
+estimated time needed before the average result is calculated: 22.093s[0m
+2025-02-21 10:18:29 INFO     [30mReal time elapsed: 23.0598[0m
+2025-02-21 10:18:29 INFO     [33mCore 2: 0.8869 seconds[0m
+2025-02-21 10:18:30 INFO     [30mCalculating Core [4] average time required to process all runs, 
+estimated time needed before the average result is calculated: 21.665s[0m
+2025-02-21 10:18:54 INFO     [30mReal time elapsed: 22.4376[0m
+2025-02-21 10:18:54 INFO     [33mCore 4: 0.8630 seconds[0m
+2025-02-21 10:18:55 INFO     [30mCalculating Core [6] average time required to process all runs, 
+estimated time needed before the average result is calculated: 21.705s[0m
+2025-02-21 10:19:19 INFO     [30mReal time elapsed: 22.436[0m
+2025-02-21 10:19:19 INFO     [33mCore 6: 0.8629 seconds[0m
+2025-02-21 10:19:20 INFO     [30mCalculating Core [8] average time required to process all runs, 
+estimated time needed before the average result is calculated: 16.44s[0m
+2025-02-21 10:19:38 INFO     [30mReal time elapsed: 16.7882[0m
+2025-02-21 10:19:38 INFO     [36mCore 8: 0.6457 seconds[0m
+2025-02-21 10:19:39 INFO     [30mCalculating Core [10] average time required to process all runs, 
+estimated time needed before the average result is calculated: 21.977s[0m
+2025-02-21 10:20:04 INFO     [30mReal time elapsed: 22.8001[0m
+2025-02-21 10:20:04 INFO     [33mCore 10: 0.8769 seconds[0m
+2025-02-21 10:20:04 INFO     [32m
+Finished running task: Gaussian blur[0m
+2025-02-21 10:20:04 INFO     [([0], 0.645323076923077), ([8], 0.6456999999999999)]
+2025-02-21 10:20:04 INFO     [([2], 0.8869153846153845), ([4], 0.8629846153846154), ([6], 0.8629230769230769), ([10], 0.8769269230769231)]
+2025-02-21 10:20:04 INFO     [32m
+Fastest cluster 0 core: Core [0] with 0.6453 seconds[0m
+2025-02-21 10:20:04 INFO     [31mSlowest cluster 0 core: Core [8] with 0.6457 seconds[0m
+2025-02-21 10:20:04 INFO     [33mAverage time for cluster 0: 0.6455115384615384[0m
+2025-02-21 10:20:04 INFO     [32m
+Fastest cluster 1 core: Core [6] with 0.8629 seconds[0m
+2025-02-21 10:20:04 INFO     [31mSlowest cluster 1 core: Core [2] with 0.8869 seconds[0m
+2025-02-21 10:20:04 INFO     [33mAverage time for cluster 1: 0.8724374999999999[0m
