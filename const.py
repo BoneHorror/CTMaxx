@@ -22,5 +22,5 @@ E_CORES = range(12,24)
 
 #Ryzen AI 9 365 var.
 #P_CORES = range(0,8)
-E_CORES = range(8,20)
+#E_CORES = range(8,20)
 

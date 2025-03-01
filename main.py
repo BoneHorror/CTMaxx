@@ -12,4 +12,6 @@ if __name__ == "__main__":
     tester.compare_and_reset_results()
     tester.run_test(4)
     tester.compare_and_reset_results()
-    
+    tester.run_test(5)
+    tester.compare_and_reset_results()
+    tester.summarize_results()

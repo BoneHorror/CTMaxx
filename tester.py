@@ -7,6 +7,9 @@ from const import ANSI_COLORS, P_CORES, E_CORES, SMT
 import logging
 
 def print_with_log(text:str, level=1, do_print=True):
+    '''Print text to console and log file.
+    text: text to print
+    level: 0 - debug, 1 - info, 2 - warning, 3 - error, 4 - critical'''
     if do_print:
         print(text)
     match level:
@@ -20,6 +23,7 @@ def print_with_log(text:str, level=1, do_print=True):
             logging.error(text)
         case 4:
             logging.critical(text)
+    return text
 
 class CPUTaskTester:
     def __init__(self):
@@ -31,11 +35,14 @@ class CPUTaskTester:
         self.num_cores = multiprocessing.cpu_count()
         self.results_p = []
         self.results_e = []
+        self.summary_log = []
         self.color = ANSI_COLORS
         self.last_task_name = ""
         print_with_log(f"Found {self.cpu_name} with {self.num_cores} logical cores. Architecture: {self.arch}")
 
     def measure_time(self, core_set: int, task: callable, repeats = 25):
+        '''Measure time taken to run task on specified core_set.
+        core_set: list of core ids to run the task on.'''
         time_list = []
         if not(isinstance(core_set, list)):
             core_set = [core_set]
@@ -57,6 +64,8 @@ class CPUTaskTester:
         return core_set, mean_time
     
     def run_test(self, test_type:int):
+        '''Run specified SingleThreadTask method on and print duration for each core.
+        test_type: 0 - matrix multiplication, 1 - sorting arrays, 2 - finding prime numbers, 3 - fast fourier transform, 4 - image processing'''
         print_with_log("Iterating tests on cores...")
         sttask = SingleThreadTask()
         match test_type:
@@ -75,6 +84,9 @@ class CPUTaskTester:
             case 4:
                 task = sttask.image_processing
                 self.last_task_name = "Gaussian blur"
+            case 5:
+                task = sttask.avx512_in
+                self.last_task_name = "AVX512 instructions"
         print_with_log(f"{self.color.GREEN}\nStarted running task: {self.last_task_name}{self.color.RESET}")
         for core_id in range(self.num_cores):
             if SMT:
@@ -94,44 +106,37 @@ class CPUTaskTester:
         print_with_log(f"{self.color.GREEN}\nFinished running task: {self.last_task_name}{self.color.RESET}")
                 
     def compare_and_reset_results(self):
+        '''Prints fastest and slowest core for each cluster and average time for each cluster to process the last task.'''
         fastest_pcore = min(self.results_p, key=lambda x: x[1])
         slowest_pcore = max(self.results_p, key=lambda x: x[1])
-        fastest_ecore = min(self.results_e, key=lambda x: x[1])
-        slowest_ecore = max(self.results_e, key=lambda x: x[1])
+        if not len(self.results_e) == 0:
+            fastest_ecore = min(self.results_e, key=lambda x: x[1])
+            slowest_ecore = max(self.results_e, key=lambda x: x[1])
         print_with_log(self.results_p, do_print=False)
-        print_with_log(self.results_e, do_print=False)
+        if not len(self.results_e) == 0:
+            print_with_log(self.results_e, do_print=False)
         sum_p = 0.0
         sum_e = 0.0
         for result in self.results_p:
             sum_p += result[1]
-        for result in self.results_e:
-            sum_e += result[1]
+        if not len(self.results_e) == 0:    
+            for result in self.results_e:
+                sum_e += result[1]
         mean_pcore = sum_p/len(self.results_p)
-        mean_ecore = sum_e/len(self.results_e)
+        if not len(self.results_e) == 0:
+            mean_ecore = sum_e/len(self.results_e)
         print_with_log(f"{self.color.GREEN}\nFastest cluster 0 core: Core {fastest_pcore[0]} with {fastest_pcore[1]:.4f} seconds{self.color.RESET}")
         print_with_log(f"{self.color.RED}Slowest cluster 0 core: Core {slowest_pcore[0]} with {slowest_pcore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for a cluster 0 core to process {self.last_task_name}: {mean_pcore:.4f}{self.color.RESET}")
-        print_with_log(f"{self.color.GREEN}\nFastest cluster 1 core: Core {fastest_ecore[0]} with {fastest_ecore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.RED}Slowest cluster 1 core: Core {slowest_ecore[0]} with {slowest_ecore[1]:.4f} seconds{self.color.RESET}")
-        print_with_log(f"{self.color.YELLOW}Average time for a cluster 1 core to process {self.last_task_name}: {mean_ecore:.4f}{self.color.RESET}")
+        self.summary_log.append(print_with_log(f"{self.color.YELLOW}Average time for a cluster 0 core to process {self.last_task_name}: {mean_pcore:.4f}{self.color.RESET}"))
+        if not len(self.results_e) == 0:
+            print_with_log(f"{self.color.GREEN}\nFastest cluster 1 core: Core {fastest_ecore[0]} with {fastest_ecore[1]:.4f} seconds{self.color.RESET}")
+            print_with_log(f"{self.color.RED}Slowest cluster 1 core: Core {slowest_ecore[0]} with {slowest_ecore[1]:.4f} seconds{self.color.RESET}")
+            self.summary_log.append(print_with_log(f"{self.color.YELLOW}Average time for a cluster 1 core to process {self.last_task_name}: {mean_ecore:.4f}{self.color.RESET}"))
         self.results_p = []
         self.results_e = []
 
-    def run_on_sets(self): #TODO
-        core_sets = [
-        [0],
-        [1, 2],
-        [3, 4, 5, 6]
-        ]
-        results = []
-
-        for core_set in core_sets:
-            core_result = self.measure_time(core_set)
-            results.append(core_result)
-            print_with_log(f"Cores {core_set}: {core_result[1]:.4f} seconds")
-
-        fastest_set = min(results, key=lambda x: x[1])
-        slowest_set = max(results, key=lambda x: x[1])
-
-        print_with_log(f"\nFastest core set: Cores {fastest_set[0]} with {fastest_set[1]:.4f} seconds")
-        print_with_log(f"Slowest core set: Cores {slowest_set[0]} with {slowest_set[1]:.4f} seconds")
+    def summarize_results(self):
+        '''Prints summary of all tests run.'''
+        print_with_log(f"{self.color.GREEN}\nSummary of all average values for the runs:{self.color.RESET}")
+        for line in self.summary_log:
+            print_with_log(line)
