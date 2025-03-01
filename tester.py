@@ -23,8 +23,8 @@ def print_with_log(text:str, level=1, do_print=True):
 
 class CPUTaskTester:
     def __init__(self):
-        logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s', filename="ctm.log", encoding='utf8', level = logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
-        logging.FileHandler("ctm.log", mode = "w")
+        logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s', filename="ctm.ans", encoding='utf8', level = logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
+        logging.FileHandler("ctm.ans", mode = "w")
         self.cpu_name = platform.processor()
         self.arch = platform.architecture()
         self.time_estimate: list[int] = [0]
